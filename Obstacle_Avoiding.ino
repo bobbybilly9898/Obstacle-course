@@ -123,7 +123,7 @@ void moveForward() {
     motor2.run(FORWARD);      
    for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // slowly bring the speed up to avoid loading down the batteries too quickly
    {
-    motor1.setSpeed(speedSet);
+    motor1.setSpeed(speedSet+MAX_SPEED_OFFSET);
     motor2.setSpeed(speedSet+MAX_SPEED_OFFSET);
     delay(5);
    }
